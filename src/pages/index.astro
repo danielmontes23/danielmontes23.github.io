@@ -1,16 +1,17 @@
----
-
----
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Daniel's Website</title>
-	</head>
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Daniel's Website </title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="time.js" defer></script>
+    <script src="date.js" defer></script>
+
+</head>
+<body class="h-screen flex items-center justify-center">
+
 		<h1>Daniel I. Montes</h1>
 
     	<img src="profilepic.jpg" alt="My profile pic">
@@ -18,5 +19,24 @@
     	<p>I am from a small town called Prosser, Washington. I started at EWU in 2020 with no idea what to major in until I stumbled upon the Bachelors in Computer Science major. I do have a minor in Communications, Spanish, and I am currently working on my Cyber Security minor. I currently work at the Center for Academic Advising and Retention(CAAR) on the Cheney campus as an office aid.</p>
 
     	<h2>My Links</h2>
-	</body>
+
+		<!-- Time -->
+         
+        <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono">
+                <data class="hours text-9x1">HH</data> :
+                <data class="minutes text-9x1">MM</data> :
+                <data class="seconds text-9x1">SS</data>
+                <data class="amOrPM text-9x1">AM/PM</data>
+            </time>
+      
+          
+        <!-- Date -->
+        <time class="date font-mono">
+          <data class="dayOfWeek text-9x1">SMTWTFS</data> -
+          <data class="month text-9x1">Month</data>
+          <data class="dayOfMonth text-9x1">00</data>,
+          <data class="year text-9x1">0000</data> 
+        </time>
+
+</body>
 </html>
