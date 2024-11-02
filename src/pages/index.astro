@@ -4,13 +4,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Daniel's Website </title>
+    
+    <link rel="stylesheet" href="../styles/style.css">
 
-	<link rel="stylesheet" href="style.css">
-	<script src="time.js" defer></script>
-    <script src="date.js" defer></script>
+    <script src="../components/time.js" defer></script>
+    <script src="../components/date.js" defer></script>
 
 </head>
 <body class="h-screen flex items-center justify-center">
+
+        <!-- Time -->
+         
+        <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono">
+            <data class="hours text-9x1">HH</data> :
+            <data class="minutes text-9x1">MM</data> :
+            <data class="seconds text-9x1">SS</data>
+            <data class="amOrPM text-9x1">AM/PM</data>
+        </time>
+  
+    
+        <!-- Date -->
+        <time class="date font-mono">
+        <data class="dayOfWeek text-9x1">SMTWTFS</data> -
+        <data class="month text-9x1">Month</data>
+        <data class="dayOfMonth text-9x1">00</data>,
+        <data class="year text-9x1">0000</data> 
+        </time>
 
 		<h1>Daniel I. Montes</h1>
 
@@ -19,24 +38,42 @@
     	<p>I am from a small town called Prosser, Washington. I started at EWU in 2020 with no idea what to major in until I stumbled upon the Bachelors in Computer Science major. I do have a minor in Communications, Spanish, and I am currently working on my Cyber Security minor. I currently work at the Center for Academic Advising and Retention(CAAR) on the Cheney campus as an office aid.</p>
 
     	<h2>My Links</h2>
-
-		<!-- Time -->
-         
-        <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono">
-                <data class="hours text-9x1">HH</data> :
-                <data class="minutes text-9x1">MM</data> :
-                <data class="seconds text-9x1">SS</data>
-                <data class="amOrPM text-9x1">AM/PM</data>
-            </time>
-      
-          
-        <!-- Date -->
-        <time class="date font-mono">
-          <data class="dayOfWeek text-9x1">SMTWTFS</data> -
-          <data class="month text-9x1">Month</data>
-          <data class="dayOfMonth text-9x1">00</data>,
-          <data class="year text-9x1">0000</data> 
-        </time>
+        <div class="links">
+            <ul>
+                <li><a href="https://github.com/danielmontes23" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/danielmontes23/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://codepen.io/your-work" target="_blank">CodePen</a></li>
+            </ul>
+        </div>
 
 </body>
+
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+                const amOrPM = hours >= 12 ? 'PM' : 'AM';
+
+                document.querySelector('.hours').textContent = String(hours % 12 || 12).padStart(2, '0');
+                document.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
+                document.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
+                document.querySelector('.amOrPM').textContent = amOrPM;
+
+                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const months = [
+                    'January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'
+                ];
+
+                document.querySelector('.dayOfWeek').textContent = daysOfWeek[now.getDay()];
+                document.querySelector('.month').textContent = months[now.getMonth()];
+                document.querySelector('.dayOfMonth').textContent = String(now.getDate()).padStart(2, '0');
+                document.querySelector('.year').textContent = String(now.getFullYear());
+            }
+
+            setInterval(updateTime, 1000);
+            updateTime();
+        </script>
 </html>
