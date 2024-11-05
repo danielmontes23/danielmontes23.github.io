@@ -21,7 +21,7 @@
             <data class="seconds text-9x1">SS</data>
             <data class="amOrPM text-9x1">AM/PM</data>
         </time>
-        
+    
         <!-- Date -->
         <time class="date font-mono" style="font-family: Arial;">
         <data class="dayOfWeek text-9x1">SMTWTFS</data> -
@@ -30,15 +30,26 @@
         <data class="year text-9x1">0000</data> 
         </time>
 
-        <nav style="font-family: Arial;">
+        <nav>
             <ul>
-            <li><a href="/about">About Me</a></li>
+                <li><a href="/about" style="font-family: Arial;">About Me</a></li>
             </ul>
         </nav>
 
-        <div style="font-family: Arial;">
-            <marquee behavior="" direction="" style="font-size: 4rem;">WELCOME TO MI SITIO WEB COMPAS</marquee>
+        <div class="">
+            <marquee behavior="" direction="" style="font-size: 4rem; font-family: Arial;">WELCOME TO MI SITIO WEB COMPAS</marquee>
         </div>
+        <style>
+            body{
+                background: Gray;
+            }
+            time {
+                text-align: center;
+                font-size: 2rem;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
 </body>
         <script>
             function updateTime() {
