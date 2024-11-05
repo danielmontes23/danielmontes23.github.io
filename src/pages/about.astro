@@ -11,35 +11,45 @@ layout: "../layouts/MainLayout.astro"
     <title>About Me</title>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="/about">Home</a></li>
         </ul>
     </nav>
-    <h1>About Me</h1>
-    <img src="profilepic.jpg" alt="My profile pic">
+    <h1 style="text-align: center;">About Me</h1>
+    <img src="profilepic.jpg" alt="My profile pic" style="display: block; margin-left: auto; margin-right: auto;">
 
-    <p>I am from a small town called Prosser, Washington. I started at EWU in 2020 with no idea what to major in until I stumbled upon the Bachelors in Computer Science major.
-     I do have a minor in Communications, Spanish, and I am currently working on my Cyber Security minor. 
-     I currently work at the Center for Academic Advising and Retention(CAAR) on the Cheney campus as an office aid.</p>
+    <div style="text-align: center;">
+        <p>I am from a small town called Prosser, Washington. I started at EWU in 2020 with no idea what to major in until I stumbled upon the Bachelors in Computer Science major.</p>
+        <p>I do have a minor in Communications, Spanish, and I am currently working on my Cyber Security minor. 
+        I currently work at the Center for Academic Advising and Retention(CAAR) on the Cheney campus as an office aid.</p>
+    </div>
 
-    <h2>Languages I have used Before</h2>
-    <ul>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python</li>
-        <li>SQL</li>
+    <div style="text-align: center;">
+        <h2>Languages I have used Before</h2>
+        <ul style="display: inline-block; text-align: left;">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>SQL</li>
+        </ul>
+    </div>
     </ul>
-    <h2>My Links</h2>
-        <div class="links">
-            <ul>
-                <li><a href="https://github.com/danielmontes23" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/daniel-montes-095602192/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://codepen.io/your-work" target="_blank">CodePen</a></li>
-            </ul>
-        </div>
+    <h2 style="text-align: center;">My Links</h2>
+    <div class="links" style="text-align: center;">
+        <ul style="display: inline-block; text-align: left;">
+            <li><a href="https://github.com/danielmontes23" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-montes-095602192/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://codepen.io/your-work" target="_blank">CodePen</a></li>
+        </ul>
+    </div>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+        </style>
 </body>
 </html>
