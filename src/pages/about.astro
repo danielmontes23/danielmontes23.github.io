@@ -12,29 +12,27 @@
 </head>
 <body>
 
-    <nav style="text-align: center; font-family: Arial, sans-serif;">
-        <ul style="display: inline-block; list-style-type: none; padding: 0; margin-right: 20px;">
-        <li><button class="btn"><a href="/" style="text-decoration: none;">Home</a></button></li>
-        </ul>
-        <ul style="display: inline-block; list-style-type: none; padding: 0;">
-        <li><button class="btn"><a href="/projects" style="text-decoration: none;">Projects</a></button></li>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><button class="btn"><a href="/" class="nav-link">Home</a></button></li>
+            <li><button class="btn"><a href="/projects" class="nav-link">Projects</a></button></li>
         </ul>
     </nav>
 
-    <h1 style="text-align: center; color: white;"><u>About Me</u></h1>
-    <img src="EWU1.jpg" alt="EWU" style="display: block; margin-left: auto; margin-right: auto;">
+    <h1 class="title"><u>About Me</u></h1>
+    <img src="EWU1.jpg" alt="EWU" class="center-image">
 
-    <div style="text-align: center; color: white;">
+    <div class="content">
         <p>My name is Daniel Montes and I am from a small town called Prosser, Washington. I started at EWU in 2020 with no idea what to major in until I stumbled upon the Bachelors in Computer Science major.</p>
         <p>I do have a minor in Communications, Spanish, and I am currently working on my Cyber Security minor. 
         I currently work at the Center for Academic Advising and Retention(CAAR) on the Cheney campus as an office aid.</p>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-        <div style="border: 2px solid black; padding: 20px; width: 50%; text-align: left;">
-            <div style="width: 45%; float: left;">
-                <h2 style="color: white; font-size: 24px;"><u>Languages I am Familiar with</u></h2>
-                <ul style="text-align: left; color: white;">
+    <div class="flex-container">
+        <div class="info-box">
+            <div class="left-column">
+                <h2 class="subtitle"><u>Languages I am Familiar with</u></h2>
+                <ul class="list">
                     <li>Java</li>
                     <li>JavaScript</li>
                     <li>HTML</li>
@@ -44,9 +42,9 @@
                 </ul>
             </div>
 
-            <div style="width: 45%; float: right;">
-                <h3 style="color: white; font-size: 29px;"><u>Hobbies</u></h3>
-                <ul style="text-align: left; color: white;">
+            <div class="right-column">
+                <h3 class="subtitle"><u>Hobbies</u></h3>
+                <ul class="list">
                     <li>Collecting Sneakers</li>
                     <li>Watching the Boston Celtics</li>
                     <li>Playing Xbox</li>
@@ -57,18 +55,82 @@
         </div>
     </div>
 
-    <h2 style="text-align: center; color: white; margin-bottom: 10px;"><u>My Links</u></h2>
-    <div class="links" style="text-align: center; margin-top: 0;">
-        <ul style="display: inline-block; text-align: center; padding: 0; margin: 0;">
-            <li style="display: inline; margin-right: 10px;"><a href="https://github.com/danielmontes23" target="_blank">GitHub</a></li>
-            <li style="display: inline; margin-right: 10px;"><a href="https://www.linkedin.com/in/daniel-montes-095602192/" target="_blank">LinkedIn</a></li>
-            <li style="display: inline;"><a href="https://codepen.io/your-work" target="_blank">CodePen</a></li>
+    <h2 class="title"><u>My Links</u></h2>
+    <div class="links">
+        <ul class="link-list">
+            <li><a href="https://github.com/danielmontes23" target="_blank" class="link">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-montes-095602192/" target="_blank" class="link">LinkedIn</a></li>
+            <li><a href="https://codepen.io/your-work" target="_blank" class="link">CodePen</a></li>
         </ul>
     </div>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                background: #C8102E;
+            font-family: Arial, sans-serif;
+            background: #C8102E;
+            }
+            .nav {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            }
+            .nav-list {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            }
+            .nav-link {
+            text-decoration: none;
+            }
+            .btn {
+            margin: 0 5px;
+            }
+            .title {
+            text-align: center;
+            color: white;
+            }
+            .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            .content {
+            text-align: center;
+            color: white;
+            }
+            .flex-container {
+            display: flex;
+            justify-content: center;
+            }
+            .info-box {
+            border: 2px solid black;
+            padding: 20px;
+            width: 50%;
+            text-align: left;
+            }
+            .left-column, .right-column {
+            width: 45%;
+            float: left;
+            }
+            .subtitle {
+            color: white;
+            }
+            .list {
+            text-align: left;
+            color: white;
+            }
+            .links {
+            text-align: center;
+            }
+            .link-list {
+            display: inline-block;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            }
+            .link {
+            display: inline;
+            margin-right: 10px;
             }
         </style>
 </body>
