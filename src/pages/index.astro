@@ -13,76 +13,116 @@
 </head>
 <body class="h-screen flex items-center justify-center">
 
-        <!-- Time -->
-         
-        <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono" style="font-family: Arial; color: white;">
-            <data class="hours text-9x1">HH</data> :
-            <data class="minutes text-9x1">MM</data> :
-            <data class="seconds text-9x1">SS</data>
-            <data class="amOrPM text-9x1">AM/PM</data>
-        </time>
-        
-        <!-- Date -->
-        <time class="date font-mono" style="font-family: Arial; color: white;">
-        <data class="dayOfWeek text-9x1">SMTWTFS</data> -
-        <data class="month text-9x1">Month</data>
-        <data class="dayOfMonth text-9x1">00</data>,
-        <data class="year text-9x1">0000</data> 
-        </time>
+        <!-- Time and Date Container -->
+        <div class="time-date-container">
+            <!-- Time -->
+            <time class="time">
+            <data class="hours">HH</data> :
+            <data class="minutes">MM</data> :
+            <data class="seconds">SS</data>
+            <data class="amOrPM">AM/PM</data>
+            </time>
+            
+            <!-- Date -->
+            <time class="date">
+            <data class="dayOfWeek">SMTWTFS</data> -
+            <data class="month">Month</data>
+            <data class="dayOfMonth">00</data>,
+            <data class="year">0000</data> 
+            </time>
+        </div>
 
-
-        <nav style="text-align: center; font-family: Arial, sans-serif;">
-            <ul style="display: inline-block; list-style-type: none; padding: 0; margin-right: 20px;">
-            <li><button class="btn"><a href="/about" style="text-decoration: none;">About Me</a></button></li>
-            </ul>
-            <ul style="display: inline-block; list-style-type: none; padding: 0;">
-            <li><button class="btn"><a href="/projects" style="text-decoration: none;">Projects</a></button></li>
+        <nav class="nav">
+            <ul class="nav-list">
+            <li><button class="btn"><a href="/about" class="nav-link">About Me</a></button></li>
+            <li><button class="btn"><a href="/projects" class="nav-link">Projects</a></button></li>
             </ul>
         </nav>
 
-        <div class="">
-            <marquee behavior="" direction="" style="font-size: 4rem; font-family: Arial; color: white;">WELCOME TO THE HOMEPAGE DE MI SITIO WEB COMPAS</marquee>
+        <div class="welcome-message">
+            <marquee behavior="" direction="">WELCOME TO THE HOMEPAGE DE MI SITIO WEB COMPAS</marquee>
         </div>
-        <img src="profilepic.jpg" alt="My profile pic" style="display: block; margin-left: auto; margin-right: auto;">
+        <img src="profilepic.jpg" alt="My profile pic" class="profile-pic">
         
         <style>
-            body{
-                background: #C8102E;
+            body {
+            background: #C8102E;
             }
             time {
-                text-align: center;
-                font-size: 2rem;
-                display: block;
-                margin: 0 auto;
+            text-align: center;
+            font-size: 2rem;
+            display: block;
+            margin: 0 auto;
+            }
+            .nav {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            }
+            .nav-list {
+            display: inline-block;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            }
+            .nav-list li {
+            display: inline;
+            margin: 0 10px;
+            }
+            .nav-link {
+            text-decoration: none;
+            }
+            .welcome-message {
+            font-size: 4rem;
+            font-family: Arial;
+            color: white;
+            text-align: center;
+            }
+            .profile-pic {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            .time-date-container {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            }
+            .time, .date {
+            display: block;
+            margin: 0 auto;
+            font-size: 2rem;
+            }
+            .time data, .date data {
+            font-size: 2rem;
             }
         </style>
-</body>
+    </body>
         <script>
             function updateTime() {
-                const now = new Date();
-                const hours = now.getHours();
-                const minutes = now.getMinutes();
-                const seconds = now.getSeconds();
-                const amOrPM = hours >= 12 ? 'PM' : 'AM';
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const amOrPM = hours >= 12 ? 'PM' : 'AM';
 
-                document.querySelector('.hours').textContent = String(hours % 12 || 12).padStart(2, '0');
-                document.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
-                document.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
-                document.querySelector('.amOrPM').textContent = amOrPM;
+            document.querySelector('.hours').textContent = String(hours % 12 || 12).padStart(2, '0');
+            document.querySelector('.minutes').textContent = String(minutes).padStart(2, '0');
+            document.querySelector('.seconds').textContent = String(seconds).padStart(2, '0');
+            document.querySelector('.amOrPM').textContent = amOrPM;
 
-                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                const months = [
-                    'January', 'February', 'March', 'April', 'May', 'June',
-                    'July', 'August', 'September', 'October', 'November', 'December'
-                ];
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = [
+                'January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
+            ];
 
-                document.querySelector('.dayOfWeek').textContent = daysOfWeek[now.getDay()];
-                document.querySelector('.month').textContent = months[now.getMonth()];
-                document.querySelector('.dayOfMonth').textContent = String(now.getDate()).padStart(2, '0');
-                document.querySelector('.year').textContent = String(now.getFullYear());
+            document.querySelector('.dayOfWeek').textContent = daysOfWeek[now.getDay()];
+            document.querySelector('.month').textContent = months[now.getMonth()];
+            document.querySelector('.dayOfMonth').textContent = String(now.getDate()).padStart(2, '0');
+            document.querySelector('.year').textContent = String(now.getFullYear());
             }
 
             setInterval(updateTime, 1000);
             updateTime();
         </script>
-</html>
+    </html>
