@@ -18,6 +18,7 @@
             <!-- Buttons -->
             <nav class="nav">
                 <ul class="nav-list">
+                    <li><button class="btn"><a href="/" class="nav-link">Home</a></button></li>
                 <li><button class="btn"><a href="/about" class="nav-link">About Me</a></button></li>
                 <li><button class="btn"><a href="/projects" class="nav-link">Projects</a></button></li>
                 <li><button class="btn"><a href="/contact" class="nav-link">Contact</a></button></li>
@@ -44,9 +45,9 @@
         <div class="welcome-message">
             <marquee behavior="" direction="">Hello I am Daniel, Welcome to my Website!</marquee>
         </div>
-        <img src="profilepic.jpg" alt="My profile pic" class="profile-pic"> 
+        <!-- <img src="profilepic.jpg" alt="My profile pic" class="profile-pic"> -->
 
-        <div class="projects">
+        <div class="projects" style="margin-top: 750px;">
             <h2><u>Projects in CSCD 378</u></h2>
             <ul class="projects-list">
             <li><a href="https://danielmontes23-landingpage.netlify.app/" target="_blank">Landing Page I have created.</a></li>
@@ -57,7 +58,8 @@
     
         <style>
             body {
-            background: #C8102E;
+            background: url('https://goeags.com/images/2023/5/18/Generic_Logo_campus_bg.png?width=1416&height=797&mode=crop&quality=80&format=jpg') no-repeat center center fixed;
+            background-size: cover;
             }
             time {
             text-align: center;
@@ -123,19 +125,10 @@
             .projects-list li {
             margin: 0 10px;
             }
-            .projects-list {
-            display: flex;
-            justify-content: space-around;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            }
-            .projects-list li {
-            margin: 0 10px;
-            }
             .projects-list a {
             text-decoration: none;
             font-size: 1.2rem;
+            color: white;
             }
             .projects-list a:hover {
             text-decoration: underline;
