@@ -42,10 +42,19 @@
         </div>
 
         <div class="welcome-message">
-            <marquee behavior="" direction="">Welcome to the homepage of Daniel's Website</marquee>
+            <marquee behavior="" direction="">Hello I am Daniel, Welcome to my Website!</marquee>
         </div>
-        <img src="profilepic.jpg" alt="My profile pic" class="profile-pic">
-        
+        <!-- <img src="profilepic.jpg" alt="My profile pic" class="profile-pic"> -->
+
+        <div class="projects">
+            <h2>Projects in CSCD 378</h2>
+            <ul class="projects-list">
+            <li><a href="https://danielmontes23-landingpage.netlify.app/" target="_blank">Landing Page I have created.</a></li>
+            <li><a href="https://date-time-tailwind-dmontes2.vercel.app/" target="_blank">Website which shows the current Date and Time.</a></li>
+            <li><a href="https://danielmontes23-landingpage.netlify.app/" target="_blank">Landing Page I have created.</a></li>
+            </ul>
+        </div>
+    
         <style>
             body {
             background: #C8102E;
@@ -96,6 +105,27 @@
             }
             .time data, .date data {
             font-size: 2rem;
+            }
+            h2{
+            text-align: center;
+            }
+            .projects {
+            text-align: center;
+            color: white;
+            }
+            .projects-list {
+            list-style-type: none;
+            padding: 0;
+            }
+            .projects-list li {
+            margin: 10px 0;
+            }
+            .projects-list a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            }
+            .projects-list a:hover {
+            text-decoration: underline;
             }
         </style>
     </body>
