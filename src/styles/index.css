@@ -1,0 +1,76 @@
+body {
+    background: url('https://goeags.com/images/2023/5/18/Generic_Logo_campus_bg.png?width=1416&height=797&mode=crop&quality=80&format=jpg') no-repeat center center fixed;
+    background-size: cover;
+    }
+    time {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    margin: 0 auto;
+    }
+    .nav {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    }
+    .nav-list {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    .nav-list li {
+    display: inline;
+    margin: 0 10px;
+    }
+    .nav-link {
+    text-decoration: none;
+    }
+    .welcome-message {
+    font-size: 4rem;
+    font-family: Arial;
+    color: white;
+    text-align: center;
+    }
+    .profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .time-date-container {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    }
+    .time, .date {
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
+    }
+    .time data, .date data {
+    font-size: 2rem;
+    }
+    h2{
+    text-align: center;
+    }
+    .projects {
+    text-align: center;
+    color: white;
+    }
+    .projects-list {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    .projects-list li {
+    margin: 0 10px;
+    }
+    .projects-list a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    }
+    .projects-list a:hover {
+    text-decoration: underline;
+    }
