@@ -74,3 +74,14 @@ body {
     .projects-list a:hover {
     text-decoration: underline;
     }
+    .welcome-message {
+        font-size: 4rem;
+        font-family: Arial;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: -25px; /* Moved down by 10px */
+    }
+    .welcome-message p {
+        font-size: 2rem;
+    }
