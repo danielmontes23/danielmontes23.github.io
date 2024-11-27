@@ -1,7 +1,6 @@
 * {
     font-family: Arial, sans-serif;
 }
-
 body {
     background: url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg') no-repeat center center fixed;
     background-size: cover;
@@ -25,6 +24,11 @@ body {
 h1 {
     text-align: center;
     color: white;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+}
+h2{
+    font-size: 50px;
 }
 .links {
     text-align: center;
