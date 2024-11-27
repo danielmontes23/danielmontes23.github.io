@@ -19,9 +19,11 @@
     margin: 0 5px;
     }
     .title {
-    text-align: center;
-    color: white;
-    }
+     text-align: center;
+     color: white;
+     font-size: 50px;
+     font-family: Arial, sans-serif;
+     }
     .center-image {
     display: block;
     margin-left: auto;
