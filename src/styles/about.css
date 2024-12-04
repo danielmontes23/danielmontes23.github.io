@@ -32,6 +32,8 @@
     .content {
     text-align: center;
     color: white;
+    margin-top: 10px;
+    line-height: 1.6;
     }
     .flex-container {
     display: flex;
