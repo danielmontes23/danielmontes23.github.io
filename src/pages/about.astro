@@ -1,72 +1,61 @@
 ---
- title: "About"
- layout: "../layouts/MainLayout.astro"
+title: "About"
+layout: "../layouts/MainLayout.astro"
 import "../styles/about.css";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-</head>
-<body>
+<nav class="nav">
+    <ul class="nav-list">
+        <li><button class="btn"><a href="/" class="nav-link">Home</a></button></li>
+        <li><button class="btn"><a href="/about" class="nav-link">About Me</a></button></li>
+        <li><button class="btn"><a href="/projects" class="nav-link">Projects</a></button></li>
+        <li><button class="btn"><a href="/contact" class="nav-link">Contact</a></button></li>
+    </ul>
+</nav>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li><button class="btn"><a href="/" class="nav-link">Home</a></button></li>
-            <li><button class="btn"><a href="/about" class="nav-link">About Me</a></button></li>
-            <li><button class="btn"><a href="/projects" class="nav-link">Projects</a></button></li>
-            <li><button class="btn"><a href="/contact" class="nav-link">Contact</a></button></li>
+<h1 class="title"><u>About Me</u></h1>
+<!--<img src="EWU1.jpg" alt="EWU" class="center-image"> -->
+
+<div class="photo-gallery">
+    <div class="photo">
+        <h3>Myself</h3>
+        <img src="/MiscPictures/ME.jpg" alt="Myself" style="max-height: 300px;">
+    </div>
+    <div class="photo">
+        <h3>My mother and little brother</h3>
+        <img src="/MiscPictures/Jordan,Mom,andI.JPG" alt="My mother and little brother" style="max-height: 300px;">
+    </div>
+    <div class="photo">
+        <h3>Jordan and I</h3>
+        <img src="/MiscPictures/JordanandI.jpg" alt="Jordan and I" style="max-height: 300px;">
+    </div>
+</div>
+
+<div class="content">
+    <p>My name is Daniel Montes, and I am originally from the small town of Prosser, Washington. I started at Eastern Washington University in 2020, during the COVID-19 pandemic, unsure of my career path until I discovered a passion for Computer Science. I am now majoring in Computer Science with minors in Communications, Spanish, and Cyber Security. Currently, I work as an office aide at the Center for Academic Advising and Retention (CAAR) on the Cheney campus, where I assist students with setting up and checking into their appointments and help guide them in the right direction when further assistance is needed. During my summers, I work back in Prosser in the hops before and during the harvest, doing various tasks such as taking samples, conducting experiments, harvesting, pulling, and backing up trailers, among lots of other things. My diverse academic background and work experience highlight my commitment to learning and growth.</p>
+</div>
+
+<div class="flex-container" style="display: flex; justify-content: center; margin-top: 20px;">
+    <div class="left-column" style="margin-right: 60px;">
+        <h2 class="subtitle"><u>Languages</u></h2>
+        <ul class="list">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>SQL</li>
         </ul>
-    </nav>
-
-    <h1 class="title"><u>About Me</u></h1>
-    <!--<img src="EWU1.jpg" alt="EWU" class="center-image"> -->
-
-    <div class="photo-gallery">
-        <div class="photo">
-            <h3>Myself</h3>
-            <img src="/MiscPictures/ME.jpg" alt="Myself" style="max-height: 300px;">
-        </div>
-        <div class="photo">
-            <h3>My mother and little brother</h3>
-            <img src="/MiscPictures/Jordan,Mom,andI.JPG" alt="My mother and little brother" style="max-height: 300px;">
-        </div>
-        <div class="photo">
-            <h3>Jordan and I</h3>
-            <img src="/MiscPictures/JordanandI.jpg" alt="JordanandI" style="max-height: 300px;">
-        </div>
     </div>
 
-    <div class="content">
-        <p>My name is Daniel Montes, and I am originally from the small town of Prosser, Washington. I started at Eastern Washington University in 2020, during the COVID-19 pandemic, unsure of my career path until I discovered a passion for Computer Science. I am now majoring in Computer Science with minors in Communications, Spanish, and Cyber Security. Currently, I work as an office aide at the Center for Academic Advising and Retention (CAAR) on the Cheney campus, where I assist students with setting up and checking into their appointments and help guide them in the right direction when further assistance is needed. During my summers, I work back in Prosser in the hops before and during the harvest, doing various tasks such as taking samples, conducting experiments, harvesting, pulling, and backing up trailers, among lots of other things. My diverse academic background and work experience highlight my commitment to learning and growth.</p>
+    <div class="right-column" style="margin-left: 60px;">
+        <h3 class="subtitle"><u>Hobbies</u></h3>
+        <ul class="list">
+            <li>Collecting Sneakers</li>
+            <li>Watching the Boston Celtics</li>
+            <li>Playing Xbox</li>
+            <li>Eating</li>
+            <li>Sleeping</li>
+        </ul>
     </div>
-
-    <div class="flex-container" style="display: flex; justify-content: center; margin-top: 20px;">
-        <div class="left-column" style="margin-right: -300px;">
-            <h2 class="subtitle"><u>Languages</u></h2>
-            <ul class="list">
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Python</li>
-                <li>SQL</li>
-            </ul>
-        </div>
-
-        <div class="right-column" style="margin-left: 60px;">
-            <h3 class="subtitle"><u>Hobbies</u></h3>
-            <ul class="list">
-                <li>Collecting Sneakers</li>
-                <li>Watching the Boston Celtics</li>
-                <li>Playing Xbox</li>
-                <li>Eating</li>
-                <li>Sleeping</li>
-            </ul>
-        </div>
-    </div>
-    </body>
-    </html>
+</div>
